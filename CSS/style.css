@@ -1,22 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap');
-html {
-    min-height: 100%;
-    background-size: cover;
-    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52));
-}
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+    margin: 0px;
 }
 h1 {
     color: white;
     font-family: 'Raleway';
     font-size: 3em;
 }
-
 .header {
+    grid-area: hd;
     background-color: white;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(105, 105, 105, 0.315);
 }
-/* body {background-image: linear-gradient( #FFAE42, red);} */
+.main {
+    grid-area: main;
+    color:white;
+    background-size: cover;
+    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52));
+}
+.footer {
+    grid-area: ft;
+    background-color:rgb(250, 164, 52);
+    color: darkslategray;
+}
+.grid-container {
+    display: grid;
+/*     grid-auto-rows: minmax(100px, auto); */
+    height:100vh;
+    grid-template-rows: 40px auto 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "hd"
+    "main"
+    "ft";
+}
