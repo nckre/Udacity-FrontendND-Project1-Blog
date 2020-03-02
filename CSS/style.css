@@ -14,6 +14,14 @@ h1 {
     background-color: white;
     width: 100%;
     border-bottom: 1px solid rgba(105, 105, 105, 0.315);
+    display: flex;
+    justify-content: flex-start;
+}
+.header > div {
+    border: 1px dashed grey;
+    flex: 0 1 auto;
+    padding: 10px;
+    text-align: center;
 }
 .main {
     grid-area: main;
@@ -36,7 +44,6 @@ h1 {
 
 .grid-container {
     display: grid;
-/*     grid-auto-rows: minmax(100px, auto); */
     height:100vh;
     grid-template-rows: 40px auto 40px;
     grid-template-columns: 1fr;
@@ -78,4 +85,5 @@ h1 {
     height: 200px;
     padding: 50px;
     margin: 50px;
+    flex-grow: 1;
 }
