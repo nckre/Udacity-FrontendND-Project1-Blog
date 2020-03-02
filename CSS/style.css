@@ -45,13 +45,37 @@ h1 {
     "main"
     "ft";
 }
+@media (min-width: 768px) and (max-width:1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+          "hd hd"
+          "main main"
+          "ft ft";
+    }
+}
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+          "hd hd hd hd"
+          "main main main main"
+          "ft ft ft ft";
+    }
+}
 .blog-post-preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blog-post-preview > div {
     color: darkslategray;
     background-color: white;
     border: 1px solid rgba(105, 105, 105, 0.315);
     border-radius: 25px;
-    width: 200px;
-    height: 150px;
+    width: 100px;
+    height: 200px;
     padding: 50px;
     margin: 50px;
 }
