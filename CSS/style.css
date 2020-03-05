@@ -27,11 +27,10 @@ h1 {
     grid-area: main;
     color:white;
     background-size: cover;
-    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52));
+    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52))
 }
 .footer {
     grid-area: ft;
-    background-color:rgb(250, 164, 52);
     color: darkslategray;
     display: flex;
 }
@@ -42,6 +41,18 @@ h1 {
 }
 .sidebar {
     grid-area: sd;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-size: cover;
+    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52))
+}
+.sidebar-logo {
+    height: 30px;
+    width: 30px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
 }
 .pic {
     grid-area: pic;
@@ -49,7 +60,7 @@ h1 {
 .grid-container {
     display: grid;
     height:100vh;
-    grid-template-rows: 40px auto 40px;
+    grid-template-rows: 40px min-content 40px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "hd"
@@ -66,8 +77,8 @@ h1 {
     background-color: white;
     border: 1px solid rgba(105, 105, 105, 0.315);
     border-radius: 25px;
-    width: 100px;
-    height: 50px;
+    width: 250px;
+    height: 150px;
     padding: 50px;
     margin: 30px;
 }
@@ -77,7 +88,6 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
           "hd hd"
-          "pic pic"
           "main main"
           "ft ft";
     }
@@ -89,12 +99,13 @@ h1 {
 }
 @media (min-width: 1024px) {
     .grid-container {
-        grid-template-rows: 40px 200px auto 40px;
+        grid-template-rows: 40px auto auto auto 40px;
         grid-template-columns: 40px repeat(3, 1fr);
         grid-template-areas: 
           "hd hd hd hd"
-          "pic pic pic pic"
-          "sb main main main"
+          "sd main main main"
+          "sd main main main"
+          "sd main main main"
           "ft ft ft ft";
     }
     .pic {
@@ -107,3 +118,8 @@ h1 {
         grid-auto-rows: min-content;
     }
 }
+@media only screen and (max-width: 1024px) {
+    div.sidebar {
+      display: none;
+    }
+  }
