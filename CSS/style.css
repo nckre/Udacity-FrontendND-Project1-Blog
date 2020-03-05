@@ -38,10 +38,14 @@ h1 {
 .footer > div {
     border: 1px dashed grey;
     flex: 1 1 auto;
-    padding: 12px;
     text-align: center;
 }
-
+.sidebar {
+    grid-area: sd;
+}
+.pic {
+    grid-area: pic;
+}
 .grid-container {
     display: grid;
     height:100vh;
@@ -54,36 +58,37 @@ h1 {
 }
 @media (min-width: 768px) and (max-width:1024px) {
     .grid-container {
+        grid-template-rows: 40px 200px auto 40px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
           "hd hd"
+          "pic pic"
           "main main"
           "ft ft";
     }
 }
 @media (min-width: 1024px) {
     .grid-container {
+        grid-template-rows: 40px 200px auto 40px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 
           "hd hd hd hd"
-          "main main main main"
+          "sb pic pic pic"
+          "sb main main main"
           "ft ft ft ft";
+    }
+    .pic {
+        background-color: black;
+        height: 200px;
     }
 }
 .blog-post-preview {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.blog-post-preview > div {
     color: darkslategray;
     background-color: white;
     border: 1px solid rgba(105, 105, 105, 0.315);
     border-radius: 25px;
     width: 100px;
-    height: 200px;
+    height: 50px;
     padding: 50px;
-    margin: 50px;
-    flex-grow: 1;
+    margin: 30px;
 }
