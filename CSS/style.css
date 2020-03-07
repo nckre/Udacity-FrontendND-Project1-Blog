@@ -84,7 +84,7 @@ h1 {
 }
 @media (min-width: 768px) and (max-width:1024px) {
     .grid-container {
-        grid-template-rows: 40px 200px auto 40px;
+        grid-template-rows: 40px auto 40px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
           "hd hd"
