@@ -1,0 +1,38 @@
+.content-grid {
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: white;
+    width: 1fr;
+    height: 100%;
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-gap: 50px;
+    grid-column: 100px 300px;
+    grid-template-areas: 
+    "headline" "headline"
+    "pics" "text"
+}
+
+.content-header {
+    grid-area: headline;
+    font-family: 'Raley', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+.description-box {
+    color: black;
+}
+
+.picture-box {
+    grid-area: pics;
+    display: flex; 
+}
+
+.picture-circular {
+    flex: none;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;  
+    margin: 30px;
+}
