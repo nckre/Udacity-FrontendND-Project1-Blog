@@ -1,17 +1,24 @@
 .blog-container {
-    display: grid;
+    padding: 50px;
+    display: inline-grid;
     grid-template-columns: 1fr;
     grid-auto-rows: min-content;
+    grid-gap: 50px;
 }
-.blog-container > div {
+.blog-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(197, 211, 211);
     background-color: white;
-    border: 1px solid rgba(105, 105, 105, 0.315);
+    border: 2px solid rgba(105, 105, 105, 0.315);
     border-radius: 25px;
-    width: 250px;
-    height: 150px;
-    padding: 50px;
-    margin: 30px;
+}
+.blog-post img {
+    border-radius: 25px;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
 }
 @media (min-width: 768px) and (max-width:1280px) {
     .blog-container {
