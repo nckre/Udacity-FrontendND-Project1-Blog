@@ -12,6 +12,9 @@ h1 {
     font-family: 'Major Mono Display';
     font-size: 3em;
 }
+h2 {
+    text-decoration: underline;
+}
 .header {
     grid-area: hd;
     background-color: white;

@@ -42,3 +42,33 @@
     grid-auto-rows: min-content;
     grid-template-columns: auto 1fr;
 }
+.author-info {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 150px auto;
+    border-radius: 25px;
+    border: solid lightblue 2px;
+    padding: 10px;
+}
+.author-pic {
+    grid-column: 1 ;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.author-pic > img {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.author-desc {
+    grid-column: 2 ;
+    display: flex;
+    color: black;
+    line-height: 40px;
+}
+.author-desc > ul {
+    list-style-type: none;
+}
