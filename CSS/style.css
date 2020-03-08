@@ -49,12 +49,22 @@ h1 {
 }
 .sidebar {
     grid-area: sd;
+    background-size: cover;
+    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52));
+}
+.fixed-sidebar {
+    position: fixed;
+    padding-top: 40vh;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    width: 40px;
     display: flex;
     align-items: center;
     align-content: center;
-    background-size: cover;
-    background: linear-gradient( rgb(253, 187, 43), rgb(250, 164, 52))
+    opacity: 1;
 }
+
 .sidebar-logo {
     height: 30px;
     width: 30px;
