@@ -1,0 +1,44 @@
+.content-header {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    font-family: 'Raley', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+.description-box {
+    grid-column: 2 ;
+    grid-row: 2 ;    
+    color: black;
+    min-width: 200px;
+    line-height: 50px;
+}
+
+.picture-box {
+    grid-column: 1 ;
+    grid-row: 2 ;
+    display: flex; 
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 520px;
+}
+.picture-circular {
+    flex: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;  
+    margin: 30px;
+}
+.content-grid {
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: white;
+    width: 1fr;
+    height: auto;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-rows: min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: auto 1fr;
+}
